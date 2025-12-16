@@ -1,231 +1,125 @@
 {
     "proxy": null,
     "defaultProvider": "gemini",
-    {
-        "providers": {
-            "gemini": {
-                "models": {
-                    "gemini-2.5-pro": {
-                        "contextWindow": 2000000,
-                        "supportsImages": true,
-                        "family": "gemini"
-                    },
-                    "gemini-2.0-flash-exp": {
-                        "contextWindow": 1000000,
-                        "supportsImages": true,
-                        "family": "gemini"
-                    },
-                    "gemini-1.5-pro": {
-                        "contextWindow": 2000000,
-                        "supportsImages": true,
-                        "family": "gemini"
-                    },
-                    "gemini-1.5-flash": {
-                        "contextWindow": 1000000,
-                        "supportsImages": true,
-                        "family": "gemini"
-                    },
-                    "gemini-1.0-pro": {
-                        "contextWindow": 30000,
-                        "supportsImages": false,
-                        "family": "gemini"
-                    }
+    "providers": {
+        "gemini": {
+            "models": {
+                "gemini-2.5-pro": {
+                    "contextWindow": 2000000,
+                    "supportsImages": true,
+                    "family": "gemini"
+                },
+                "gemini-2.0-flash-exp": {
+                    "contextWindow": 1000000,
+                    "supportsImages": true,
+                    "family": "gemini"
+                },
+                "gemini-1.5-pro": {
+                    "contextWindow": 2000000,
+                    "supportsImages": true,
+                    "family": "gemini"
+                },
+                "gemini-1.5-flash": {
+                    "contextWindow": 1000000,
+                    "supportsImages": true,
+                    "family": "gemini"
+                },
+                "gemini-1.0-pro": {
+                    "contextWindow": 30000,
+                    "supportsImages": false,
+                    "family": "gemini"
                 }
-            },
-            "chatgpt": {
-                "models": {
-                    "gpt-4o": {
-                        "contextWindow": 128000,
-                        "supportsImages": true,
-                        "family": "gpt"
-                    },
-                    "o1-preview": {
-                        "contextWindow": 128000,
-                        "supportsImages": true,
-                        "family": "gpt"
-                    },
-                    "gpt-4-turbo": {
-                        "contextWindow": 128000,
-                        "supportsImages": true,
-                        "family": "gpt"
-                    },
-                    "gpt-4": {
-                        "contextWindow": 8192,
-                        "supportsImages": false,
-                        "family": "gpt"
-                    },
-                    "gpt-3.5-turbo": {
-                        "contextWindow": 16385,
-                        "supportsImages": false,
-                        "family": "gpt"
-                    }
+            }
+        },
+        "chatgpt": {
+            "models": {
+                "gpt-4o": {
+                    "contextWindow": 128000,
+                    "supportsImages": true,
+                    "family": "gpt"
+                },
+                "o1-preview": {
+                    "contextWindow": 128000,
+                    "supportsImages": true,
+                    "family": "gpt"
+                },
+                "gpt-4-turbo": {
+                    "contextWindow": 128000,
+                    "supportsImages": true,
+                    "family": "gpt"
+                },
+                "gpt-4": {
+                    "contextWindow": 8192,
+                    "supportsImages": false,
+                    "family": "gpt"
+                },
+                "gpt-3.5-turbo": {
+                    "contextWindow": 16385,
+                    "supportsImages": false,
+                    "family": "gpt"
                 }
-            },
-            "claude": {
-                "models": {
-                    "claude-3-5-sonnet-20241022": {
-                        "contextWindow": 200000,
-                        "supportsImages": true,
-                        "family": "claude"
-                    },
-                    "claude-3-5-sonnet-20240620": {
-                        "contextWindow": 200000,
-                        "supportsImages": true,
-                        "family": "claude"
-                    },
-                    "claude-3-opus-20240229": {
-                        "contextWindow": 200000,
-                        "supportsImages": true,
-                        "family": "claude"
-                    },
-                    "claude-3-sonnet-20240229": {
-                        "contextWindow": 200000,
-                        "supportsImages": true,
-                        "family": "claude"
-                    },
-                    "claude-3-haiku-20240307": {
-                        "contextWindow": 200000,
-                        "supportsImages": true,
-                        "family": "claude"
-                    }
+            }
+        },
+        "claude": {
+            "models": {
+                "claude-3-5-sonnet-20241022": {
+                    "contextWindow": 200000,
+                    "supportsImages": true,
+                    "family": "claude"
+                },
+                "claude-3-5-sonnet-20240620": {
+                    "contextWindow": 200000,
+                    "supportsImages": true,
+                    "family": "claude"
+                },
+                "claude-3-opus-20240229": {
+                    "contextWindow": 200000,
+                    "supportsImages": true,
+                    "family": "claude"
+                },
+                "claude-3-sonnet-20240229": {
+                    "contextWindow": 200000,
+                    "supportsImages": true,
+                    "family": "claude"
+                },
+                "claude-3-haiku-20240307": {
+                    "contextWindow": 200000,
+                    "supportsImages": true,
+                    "family": "claude"
                 }
-            },
-            "deepseek": {
-                "models": {
-                    "deepseek-chat": {
-                        "contextWindow": 64000,
-                        "supportsImages": false,
-                        "family": "other"
-                    },
-                    "deepseek-coder": {
-                        "contextWindow": 64000,
-                        "supportsImages": false,
-                        "family": "other"
-                    },
-                    "deepseek-reasoner": {
-                        "contextWindow": 64000,
-                        "supportsImages": false,
-                        "family": "other"
-                    }
+            }
+        },
+        "deepseek": {
+            "models": {
+                "deepseek-chat": {
+                    "contextWindow": 64000,
+                    "supportsImages": false,
+                    "family": "other"
+                },
+                "deepseek-coder": {
+                    "contextWindow": 64000,
+                    "supportsImages": false,
+                    "family": "other"
+                },
+                "deepseek-reasoner": {
+                    "contextWindow": 64000,
+                    "supportsImages": false,
+                    "family": "other"
                 }
-            },
-            "ollama": {
-                "models": {
-                    // Ollama models are user-defined, but we can provide hints/defaults for common ones
-                    "deepseek-r1:latest": {
-                        "contextWindow": 8192,
-                        "family": "other"
-                    },
-                    "llama3:latest": {
-                        "contextWindow": 8192,
-                        "family": "other"
-                    }
+            }
+        },
+        "ollama": {
+            "models": {
+                // Ollama models are user-defined, but we can provide hints/defaults for common ones
+                "deepseek-r1:latest": {
+                    "contextWindow": 8192,
+                    "family": "other"
+                },
+                "llama3:latest": {
+                    "contextWindow": 8192,
+                    "family": "other"
                 }
             }
         }
-    },
-    "defaultTerminalPolicy": "turbo",
-    "terminalPolicy": {
-        "off": {},
-        "safe": {
-            "blockedCommands": [
-                "rm -rf",
-                "sudo",
-                "dd"
-            ]
-        },
-        "turbo": {
-            "blockedCommands": [
-                "rm -rf /",
-                "sudo rm",
-                "dd"
-            ],
-            "requireConfirmation": [
-                "git push",
-                "npm publish"
-            ]
-        },
-        "custom": {
-            "allowedCommands": [
-                "npm",
-                "git",
-                "ls",
-                "cat",
-                "grep",
-                "find",
-                "pwd",
-                "echo"
-            ],
-            "blockedCommands": [
-                "rm -rf",
-                "sudo rm",
-                "dd",
-                "mkfs"
-            ],
-            "allowedPaths": [
-                "./src",
-                "./tests",
-                "./scripts"
-            ],
-            "requireConfirmation": [
-                "npm install",
-                "npm uninstall",
-                "git push"
-            ]
-        }
-    },
-    "defaultAuthorityMode": "Autonomous",
-    "authorityModes": {
-        "autonomous": {
-            "description": "Full Agent - Do everything until done",
-            "maxIterations": 10,
-            "autoTest": true,
-            "autoDebug": true,
-            "stopOnlyFor": [
-                "data_loss_risk",
-                "security_risk",
-                "production_changes"
-            ]
-        },
-        "smart": {
-            "description": "AI decides when to ask based on risk",
-            "riskThreshold": 3,
-            "alwaysAskFor": [
-                "delete_file",
-                "architecture_change",
-                "breaking_change"
-            ],
-            "neverAskFor": [
-                "read_files",
-                "search_code",
-                "view_file"
-            ]
-        },
-        "collaborative": {
-            "description": "Always ask before executing",
-            "requireApprovalFor": [
-                "edit_file",
-                "run_terminal",
-                "delete_file"
-            ]
-        },
-        "optimistic": {
-            "description": "Execute immediately, revert if needed",
-            "atomic": true,
-            "autoRevert": false
-        }
-    },
-    "rag": {
-        "enabled": true,
-        "autoIndex": false,
-        "indexOnStartup": false,
-        "maxFiles": 500,
-        "topK": 3
-    },
-    "autoClearHistory": {
-        "enabled": true,
-        "mode": "smart",
-        "keepSystemPrompt": true,
-        "showNotification": true
     }
 }
