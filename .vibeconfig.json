@@ -3,126 +3,203 @@
     "defaultProvider": "gemini",
     "providers": {
         "gemini": {
+            "baseURL": "https://generativelanguage.googleapis.com/v1beta",
+            "method": "POST",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "defaultModel": "gemini-2.5-flash",
             "models": {
                 "gemini-2.5-pro": {
-                    "contextWindow": 2000000,
+                    "contextWindow": 2097152,
                     "supportsImages": true,
-                    "family": "gemini"
+                    "tags": [
+                        "code",
+                        "reasoning",
+                        "long-context"
+                    ]
                 },
-                "gemini-2.0-flash": {
-                    "contextWindow": 2000000,
+                "gemini-2.5-flash": {
+                    "contextWindow": 1048576,
                     "supportsImages": true,
-                    "family": "gemini"
-                },
-                "gemini-2.0-flash-exp": {
-                    "contextWindow": 1000000,
-                    "supportsImages": true,
-                    "family": "gemini"
-                },
-                "gemini-1.5-pro": {
-                    "contextWindow": 2000000,
-                    "supportsImages": true,
-                    "family": "gemini"
-                },
-                "gemini-1.5-flash": {
-                    "contextWindow": 1000000,
-                    "supportsImages": true,
-                    "family": "gemini"
-                },
-                "gemini-1.0-pro": {
-                    "contextWindow": 30000,
-                    "supportsImages": false,
-                    "family": "gemini"
+                    "tags": [
+                        "code",
+                        "fast"
+                    ]
                 }
             }
         },
         "chatgpt": {
+            "baseURL": "https://api.openai.com/v1",
+            "method": "POST",
+            "headers": {
+                "Authorization": "Bearer ${OPENAI_API_KEY}",
+                "Content-Type": "application/json"
+            },
+            "defaultModel": "gpt-5.2-pro",
             "models": {
-                "gpt-4o": {
-                    "contextWindow": 128000,
+                "gpt-5.2-pro": {
+                    "contextWindow": 256000,
                     "supportsImages": true,
-                    "family": "gpt"
+                    "tags": [
+                        "code",
+                        "reasoning",
+                        "agent",
+                        "top-tier"
+                    ]
                 },
-                "o1-preview": {
-                    "contextWindow": 128000,
-                    "supportsImages": true,
-                    "family": "gpt"
-                },
-                "gpt-4-turbo": {
-                    "contextWindow": 128000,
-                    "supportsImages": true,
-                    "family": "gpt"
-                },
-                "gpt-4": {
-                    "contextWindow": 8192,
+                "gpt-5.1-codex-max": {
+                    "contextWindow": 200000,
                     "supportsImages": false,
-                    "family": "gpt"
+                    "tags": [
+                        "code",
+                        "reasoning",
+                        "agent"
+                    ]
                 },
-                "gpt-3.5-turbo": {
-                    "contextWindow": 16385,
+                "gpt-5.1-codex": {
+                    "contextWindow": 200000,
                     "supportsImages": false,
-                    "family": "gpt"
+                    "tags": [
+                        "code",
+                        "reasoning"
+                    ]
+                },
+                "o3-mini-high": {
+                    "contextWindow": 128000,
+                    "supportsImages": false,
+                    "tags": [
+                        "code",
+                        "reasoning",
+                        "fast",
+                        "cheap"
+                    ]
                 }
             }
         },
         "claude": {
+            "baseURL": "https://api.anthropic.com/v1",
+            "method": "POST",
+            "headers": {
+                "x-api-key": "${ANTHROPIC_API_KEY}",
+                "anthropic-version": "2023-06-01",
+                "Content-Type": "application/json"
+            },
+            "defaultModel": "claude-opus-4.5",
             "models": {
-                "claude-3-5-sonnet-20241022": {
+                "claude-opus-4.5": {
                     "contextWindow": 200000,
                     "supportsImages": true,
-                    "family": "claude"
+                    "tags": [
+                        "code",
+                        "reasoning",
+                        "architecture",
+                        "top-tier"
+                    ]
                 },
-                "claude-3-5-sonnet-20240620": {
+                "claude-sonnet-4.5": {
                     "contextWindow": 200000,
                     "supportsImages": true,
-                    "family": "claude"
+                    "tags": [
+                        "code",
+                        "reasoning",
+                        "balanced"
+                    ]
                 },
-                "claude-3-opus-20240229": {
+                "claude-3.5-haiku": {
                     "contextWindow": 200000,
-                    "supportsImages": true,
-                    "family": "claude"
-                },
-                "claude-3-sonnet-20240229": {
-                    "contextWindow": 200000,
-                    "supportsImages": true,
-                    "family": "claude"
-                },
-                "claude-3-haiku-20240307": {
-                    "contextWindow": 200000,
-                    "supportsImages": true,
-                    "family": "claude"
+                    "supportsImages": false,
+                    "tags": [
+                        "code",
+                        "fast",
+                        "light"
+                    ]
                 }
             }
         },
         "deepseek": {
+            "baseURL": "https://api.deepseek.com/v1",
+            "method": "POST",
+            "headers": {
+                "Authorization": "Bearer ${DEEPSEEK_API_KEY}",
+                "Content-Type": "application/json"
+            },
+            "defaultModel": "deepseek-r1",
             "models": {
-                "deepseek-chat": {
+                "deepseek-r1": {
                     "contextWindow": 64000,
                     "supportsImages": false,
-                    "family": "other"
+                    "tags": [
+                        "code",
+                        "reasoning",
+                        "logic",
+                        "cheap"
+                    ]
                 },
-                "deepseek-coder": {
+                "deepseek-v3": {
                     "contextWindow": 64000,
                     "supportsImages": false,
-                    "family": "other"
-                },
-                "deepseek-reasoner": {
-                    "contextWindow": 64000,
+                    "tags": [
+                        "code",
+                        "reasoning"
+                    ]
+                }
+            }
+        },
+        "grok": {
+            "baseURL": "https://api.x.ai/v1",
+            "method": "POST",
+            "headers": {
+                "Authorization": "Bearer ${GROK_API_KEY}",
+                "Content-Type": "application/json"
+            },
+            "defaultModel": "grok-3",
+            "models": {
+                "grok-3": {
+                    "contextWindow": 128000,
                     "supportsImages": false,
-                    "family": "other"
+                    "tags": [
+                        "code",
+                        "reasoning",
+                        "search"
+                    ]
                 }
             }
         },
         "ollama": {
+            "baseURL": "http://localhost:11434/v1",
+            "type": "local",
+            "method": "POST",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "defaultModel": "deepseek-r1:latest",
             "models": {
-                // Ollama models are user-defined, but we can provide hints/defaults for common ones
                 "deepseek-r1:latest": {
                     "contextWindow": 8192,
-                    "family": "other"
+                    "supportsImages": false,
+                    "tags": [
+                        "code",
+                        "reasoning",
+                        "local"
+                    ]
                 },
-                "llama3:latest": {
+                "qwen2.5-coder:latest": {
+                    "contextWindow": 32768,
+                    "supportsImages": false,
+                    "tags": [
+                        "code",
+                        "reasoning",
+                        "local"
+                    ]
+                },
+                "llama3.2:latest": {
                     "contextWindow": 8192,
-                    "family": "other"
+                    "supportsImages": false,
+                    "tags": [
+                        "general",
+                        "local"
+                    ]
                 }
             }
         }
@@ -151,7 +228,6 @@
         "custom": {
             "allowedCommands": [
                 "npm",
-                "node",
                 "git",
                 "ls",
                 "cat",
@@ -161,7 +237,7 @@
                 "echo"
             ],
             "blockedCommands": [
-                "rm -rf /",
+                "rm -rf",
                 "sudo rm",
                 "dd",
                 "mkfs"
@@ -221,8 +297,8 @@
     },
     "rag": {
         "enabled": true,
-        "autoIndex": false,
-        "indexOnStartup": false,
+        "autoIndex": true,
+        "indexOnStartup": true,
         "maxFiles": 500,
         "topK": 3
     },
