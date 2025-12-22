@@ -216,8 +216,8 @@
         }
     },
     "rag": {
-        "enabled": true,
-        "autoIndex": true,
+        "enabled": false,
+        "autoIndex": false,
         "maxFiles": 500
     },
     "autoClearHistory": {
