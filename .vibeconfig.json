@@ -348,11 +348,15 @@
     "rag": {
         "enabled": false,
         "autoIndex": false,
-        "maxFiles": 500
+        "indexOnStartup": false,
+        "maxFiles": 500,
+        "topK": 3
     },
     "autoClearHistory": {
         "enabled": true,
         "mode": "smart",
-        "keepSystemPrompt": true
-    }
+        "keepSystemPrompt": true,
+        "keepRAGContext": false,
+        "showNotification": true
+    },
 }
