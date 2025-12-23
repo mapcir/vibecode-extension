@@ -181,58 +181,6 @@
                 }
             }
         },
-        "ollama": {
-            "baseURL": "http://localhost:11434/v1",
-            "type": "local",
-            "method": "POST",
-            "headers": {
-                "Content-Type": "application/json"
-            },
-            "defaultModel": "llama3",
-            "models": {
-                "llama3": {
-                    "contextWindow": 8192,
-                    "supportsImages": false,
-                    "tags": [
-                        "code",
-                        "local"
-                    ]
-                },
-                "codellama": {
-                    "contextWindow": 16384,
-                    "supportsImages": false,
-                    "tags": [
-                        "code",
-                        "local"
-                    ]
-                },
-                "deepseek-r1": {
-                    "contextWindow": 128000,
-                    "supportsImages": false,
-                    "tags": [
-                        "reasoning",
-                        "local",
-                        "top-tier"
-                    ]
-                },
-                "deepseek-v3": {
-                    "contextWindow": 128000,
-                    "supportsImages": false,
-                    "tags": [
-                        "general",
-                        "local"
-                    ]
-                },
-                "deepseek-coder-v2": {
-                    "contextWindow": 128000,
-                    "supportsImages": false,
-                    "tags": [
-                        "code",
-                        "local"
-                    ]
-                }
-            }
-        },
         "grok": {
             "baseURL": "https://api.x.ai/v1",
             "method": "POST",
@@ -284,6 +232,58 @@
                         "reasoning",
                         "long-context",
                         "top-tier"
+                    ]
+                }
+            }
+        },
+        "ollama": {
+            "baseURL": "http://localhost:11434/v1",
+            "type": "local",
+            "method": "POST",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "defaultModel": "llama3",
+            "models": {
+                "llama3": {
+                    "contextWindow": 8192,
+                    "supportsImages": false,
+                    "tags": [
+                        "code",
+                        "local"
+                    ]
+                },
+                "codellama": {
+                    "contextWindow": 16384,
+                    "supportsImages": false,
+                    "tags": [
+                        "code",
+                        "local"
+                    ]
+                },
+                "deepseek-r1": {
+                    "contextWindow": 128000,
+                    "supportsImages": false,
+                    "tags": [
+                        "reasoning",
+                        "local",
+                        "top-tier"
+                    ]
+                },
+                "deepseek-v3": {
+                    "contextWindow": 128000,
+                    "supportsImages": false,
+                    "tags": [
+                        "general",
+                        "local"
+                    ]
+                },
+                "deepseek-coder-v2": {
+                    "contextWindow": 128000,
+                    "supportsImages": false,
+                    "tags": [
+                        "code",
+                        "local"
                     ]
                 }
             }
@@ -346,9 +346,9 @@
         }
     },
     "rag": {
-        "enabled": false,
-        "autoIndex": false,
-        "indexOnStartup": false,
+        "enabled": true,
+        "autoIndex": true,
+        "indexOnStartup": true,
         "maxFiles": 500,
         "topK": 3
     },
@@ -358,5 +358,5 @@
         "keepSystemPrompt": true,
         "keepRAGContext": false,
         "showNotification": true
-    },
+    }
 }
